@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barber Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Barber Dashboard</h1>
+
+    <section class="card" id="loginCard">
+      <h2>Secure Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" value="barber" required />
+        <label for="password">Password</label>
+        <input id="password" type="password" required placeholder="Default: barber123" />
+        <button type="submit">Sign In</button>
+      </form>
+      <p class="helper" id="loginMsg"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="grid">
+        <section class="card">
+          <h2>Status & Hours</h2>
+          <div id="barberMeta"></div>
+
+          <label for="statusSelect">Update Status</label>
+          <select id="statusSelect">
+            <option>Available</option>
+            <option>Busy</option>
+            <option>On Break</option>
+            <option>Offline</option>
+          </select>
+          <button id="saveStatus">Save Status</button>
+
+          <h3>Working Hours</h3>
+          <div class="row">
+            <input id="startHour" type="time" value="09:00" />
+            <input id="endHour" type="time" value="20:00" />
+          </div>
+          <button id="saveHours" class="secondary">Save Hours</button>
+          <p class="helper" id="controlMsg"></p>
+        </section>
+
+        <section class="card">
+          <h2>Appointment Requests</h2>
+          <div id="pendingList"></div>
+        </section>
+
+        <section class="card">
+          <h2>Calendar View (All)</h2>
+          <input id="calendarDate" type="date" />
+          <div id="calendarList"></div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <script src="/barber.js"></script>
+</body>
+</html>
