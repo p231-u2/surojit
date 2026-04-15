@@ -1,0 +1,15 @@
+{
+  "barber": {
+    "username": "barber",
+    "passwordHash": "95066db149755f1ec0a7e0c8128cd0fb:2858dfc3913a0e8b1a407819289675f57f6e1fcb4647ffd4d3022acf66a51fcabf3dc65c6c0e68c01453e9fdcd87379e10ed89bf51035272ab649504ae9260c7",
+    "fullName": "Alex Fade",
+    "personalEmail": "alex.private@example.com",
+    "businessPhone": "+1-555-123-4567",
+    "status": "Available",
+    "workingHours": {
+      "start": "09:00",
+      "end": "20:00"
+    }
+  },
+  "appointments": []
+}
