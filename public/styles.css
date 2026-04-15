@@ -1,0 +1,116 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --text: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(120deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1060px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.88);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 { margin-top: 0; }
+label { display: block; margin-bottom: 6px; color: var(--muted); }
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0b1220;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+button {
+  cursor: pointer;
+  background: #0ea5e9;
+  border: none;
+  font-weight: 600;
+}
+button.secondary { background: #334155; }
+button.accept { background: #16a34a; }
+button.reject { background: #dc2626; }
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #334155;
+  font-size: 0.88rem;
+}
+.dot { width: 9px; height: 9px; border-radius: 999px; background: var(--muted); }
+.dot.Available { background: var(--accent); }
+.dot.Busy { background: var(--danger); }
+.dot.Offline { background: #64748b; }
+.dot.On\ Break { background: var(--warning); }
+
+.slot-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.slot {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  background: #0b1220;
+}
+
+.appt {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  margin-left: 6px;
+}
+.badge.Pending { background: #f59e0b33; }
+.badge.Confirmed { background: #22c55e33; }
+.badge.Rejected { background: #ef444433; }
+
+.helper { color: var(--muted); font-size: 0.9rem; }
+.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .row { flex-direction: column; }
+}

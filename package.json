@@ -1,0 +1,10 @@
+{
+  "name": "surojit-barber-booking",
+  "version": "1.0.0",
+  "description": "Modern barber appointment booking system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
